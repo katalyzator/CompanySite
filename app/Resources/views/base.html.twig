@@ -1,13 +1,42 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    {% block stylesheets %}
+        {% stylesheets 'bundles/main/css/*' filter='cssrewrite' %}
+        <link rel="stylesheet" href="{{ asset_url }}" />
+        {% endstylesheets %}
+        <link rel="stylesheet" href="{{ asset('bundles/main/css/bootstrap.css') }}" />
+        <link rel="stylesheet" href="{{ asset('bundles/main/css/bootstrap.min.css') }}" />
+        <link rel="stylesheet" href="{{ asset('bundles/main/css/animate.css') }}" />
+        <link rel="stylesheet" href="{{ asset('bundles/main/css/style.css') }}" />
+        <link rel="stylesheet" href="{{ asset('bundles/main/font-awesome/css/font-awesome.min.css') }}" />
+        <link rel="stylesheet" href="{{ asset('bundles/main/color/default.css') }}" />
+
+
+        <!--[if lt IE 9]>
+        <script src="{{ asset('bundles/main/js/bootstrap.js') }}"></script>
+        <script src="{{ asset('bundles/main/js/bootstrap.min.js') }}"></script>
+        <![endif]-->
+
+    {% endblock %}
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+</head>
+<body>
+{% block body %}{% endblock %}
+{% block javascripts %}
+    <script type="text/javascript" src="{{ asset('bundles/main/js/jquery-1.10.2.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/main/js/jquery.scrollTo.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/main/js/jquery.easing.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/main/js/jquery.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/main/js/bootstrap.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/main/js/bootstrap.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/main/js/wow.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/main/js/custom.js') }}"></script>
+{% endblock %}
+</body>
 </html>
