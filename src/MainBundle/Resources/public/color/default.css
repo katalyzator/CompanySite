@@ -36,3 +36,15 @@ footer {
   background-color: midnightblue;
   border-color: #67b0d1;
 }
+
+.service-desc {
+    color: black;
+}
+
+h2 {
+    color: #880000;
+}
+
+h5 {
+    color: purple;
+}
