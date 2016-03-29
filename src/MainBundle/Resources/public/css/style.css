@@ -206,7 +206,8 @@ a {
 }
 
 #service,#pricing_table,#about,#team,#blog,#contact {
-    padding: 80px 0px;
+    padding: 20px 0px;
+    bottom: 50px;
 }
 
 /* Custom Basic styles
