@@ -10,7 +10,6 @@ class DefaultController extends Controller
     {
         return $this->render('MainBundle:Default:index.html.twig', array(
 
-
         ));
     }
 }
